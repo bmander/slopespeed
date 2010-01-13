@@ -30,12 +30,12 @@ def get_tracksegs( gpx_filename ):
 def main(fileins, fileout):
   out = open( fileout, "w" )
 
-  gf = GridFloat( "./data/83913931/83913931\83913931" )
+  gf = GridFloat( "./data/34293486/34293486" )
 
   for filein in fileins:
     print "working on %s"%filein
     for track in get_tracksegs( filein ):
-      for (lat1, lon1, time1), (lat2, lon2, time2) in cons(track, 5):
+      for (lat1, lon1, time1), (lat2, lon2, time2) in cons(track, 3):
         e1 = gf.elevation( lon1, lat1 )
         e2 = gf.elevation( lon2, lat2 )
   
@@ -54,6 +54,7 @@ def main(fileins, fileout):
 
         out.write( "%s,%s\n"%(grade,v) )
 
-print "starting"
-main( ("./data/BallardTrip.gpx", "./data/Track4.gpx", "./data/Track5.gpx", "./data/Track6.gpx", "./data/Track7.gpx", "./data/Track8.gpx", "./data/Track9.gpx",), "out.csv" )
-print "done"
+if __name__=='__main__':
+    print "starting"
+    main( ("./data/royaltek.gpx", "./data/BallardTrip.gpx", "./data/Track4.gpx", "./data/Track5.gpx", "./data/Track6.gpx", "./data/Track7.gpx", "./data/Track8.gpx", "./data/Track9.gpx",), "out.csv" )
+    print "done"
