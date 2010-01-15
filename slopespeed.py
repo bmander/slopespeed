@@ -56,5 +56,6 @@ def main(fileins, fileout):
 
 if __name__=='__main__':
     print "starting"
-    main( ("./data/royaltek.gpx", "./data/BallardTrip.gpx", "./data/Track4.gpx", "./data/Track5.gpx", "./data/Track6.gpx", "./data/Track7.gpx", "./data/Track8.gpx", "./data/Track9.gpx",), "out.csv" )
+    #main( ("./data/royaltek.gpx", "./data/BallardTrip.gpx", "./data/Track4.gpx", "./data/Track5.gpx", "./data/Track6.gpx", "./data/Track7.gpx", "./data/Track8.gpx", "./data/Track9.gpx",), "out.csv" )
+    main( ("data.gpx",), "out2.csv" )
     print "done"
